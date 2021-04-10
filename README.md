@@ -14,5 +14,6 @@ Let's go:
 3. Head over to your parse-server dashboard > cloud code > add
 4. Upload package.json file and click deploy.
 5. Wait for a few sec and upload main.js and deploy.
+6. Go to parse-server dashboard > background jobs > schedule the "go" function daily.
 
 That's it!
