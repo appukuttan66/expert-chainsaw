@@ -18,8 +18,8 @@ Parse.Cloud.job("go" , async(request) => {
 	let x = _coinList.HIVE;
 	const chewOnThat = await axios.post( 'https://openhive.chat/api/v1/chat.postMessage/', { channel: '#general', text: 'Beep Beep!! Boop Boop!! Daily Hive Price: '  +  x  + ' data from [coingecko](https://coingecko.com)' }, {
 		headers: {
-			'X-Auth-Token': '7ye4FfrMCAzbopv9YoXyyN7Yx2sz3ytoZBfHg_G2OvU',
-			'X-User-Id': '4A6hiCAcLqCpFRXgu'
+			'X-Auth-Token': ' ', //Auth token
+			'X-User-Id': ' ' //user id you can get these at the personal access tokens page
 		}
 	});
 	chewOnThat;
