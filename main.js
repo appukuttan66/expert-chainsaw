@@ -24,3 +24,26 @@ Parse.Cloud.job("go" , async(request) => {
 	});
 	chewOnThat;
 });
+
+Parse.Cloud.job("mention" , async(request) => {
+
+var axios = require('axios');
+var res = await axios.get( ' https://openhive.chat/api/v1/channels.getAllUserMentionsByChannel?roomId=ezzeanreDPNuJKpKa' , {
+    headers: {
+        "X-Auth-Token": " ",
+        "X-User-Id": " "
+        }
+});
+
+var stateCount = 0; //Todo: change this to stateCount in db
+
+if (res.data.count > stateCount ) {
+    var send = await axios.post('https://openhive.chat/api/v1/chat.postMessage' , { channel: 'testing3' , text: 'mention works!!'} , {
+     headers: {
+        "X-Auth-Token": " ",
+        "X-User-Id": " "
+        }
+    });
+    send;
+    } else {console.log('no new mentions');}
+});
